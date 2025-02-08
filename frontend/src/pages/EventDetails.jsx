@@ -10,7 +10,7 @@ const EventDetails = () => {
     const User = jwtDecode(localStorage.token).userId;
     console.log(User)
     const handleApply = async()=>{
-        const response = await fetch("http://localhost:5000/api/events/apply/"+id,{method:"POST",headers:{
+        const response = await fetch("https://ems-backend-229j.onrender.com/api/events/apply/"+id,{method:"POST",headers:{
             Authorization:"Bearer "+localStorage.token
         }});
         const result = await response.json();
@@ -19,7 +19,7 @@ const EventDetails = () => {
     };
      useEffect(()=>{
        const getEvents = async ()=>{
-         const response = await fetch("http://localhost:5000/api/events/"+id,{method:"GET"});
+         const response = await fetch("https://ems-backend-229j.onrender.com/api/events/"+id,{method:"GET"});
          const result = await response.json();
          console.log(result);
          setData(result)

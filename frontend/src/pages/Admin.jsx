@@ -23,7 +23,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/profile', {
+                const response = await fetch('https://ems-backend-229j.onrender.com/api/profile', {
                     method: 'GET',
                     headers: {
                         Authorization: "Bearer " + localStorage.token
@@ -69,7 +69,7 @@ const Dashboard = () => {
 
         try {
             // Send PUT request to update the user details
-            const response = await fetch("http://localhost:5000/api/profile", {
+            const response = await fetch("https://ems-backend-229j.onrender.com/api/profile", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const Dashboard = () => {
             formdata.append('relation', category);
             formdata.append('file', file); // Append the file (assuming 'file' is a File object)
 
-            const response = await fetch("http://localhost:5000/api/events/create-event", {
+            const response = await fetch("https://ems-backend-229j.onrender.com/api/events/create-event", {
                 method: "POST",
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem('token') // Authorization header only

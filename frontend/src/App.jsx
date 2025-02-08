@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EventList from './components/EventList';
 import EventDetails from './pages/EventDetails';
 import CreateEvent from './components/CreateEvent';
-import { Home } from './pages/home';
+import { Home } from './pages/Home';
 import List  from './pages/List';
 import Dashboard from './pages/Admin';
 import ProtectedRoute from './components/ProtectedRoutes';
